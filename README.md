@@ -14,7 +14,7 @@ other User's 'TasteBass' playlists to expand their horizon even further.
 - Mockito
 - Selenium
 - Angular
-- TasteDrive API
+- Spotify API
 
 ## User Stories
 User Types:
