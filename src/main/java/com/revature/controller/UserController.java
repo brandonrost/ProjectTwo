@@ -60,7 +60,7 @@ public class UserController {
 			return ResponseEntity.status(200).build();
 			
 		} catch (Exception e) {
-			logger.info("Could not send request successfully. Please try again!");
+			logger.info("Could not send request successfully. Exception: " + e);
 			
 			return ResponseEntity.status(401).body((Object) new MessageTemplate("Could not log user out. Unknown error occured.")); 
 		}

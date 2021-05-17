@@ -3,6 +3,7 @@ package com.revature.models;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,7 +53,8 @@ public class User {
 			unique = true)
 	private String email; 
 	
-	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE})
+	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE},
+			fetch = FetchType.EAGER)
 	@JoinColumn(name = "music_list_id")
 	private MusicList music_list; 
 

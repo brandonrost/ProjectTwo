@@ -3,6 +3,7 @@ package com.revature.models;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,8 @@ public class Music {
 			nullable = true)
 	private byte[] music_pic;
 	
-	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE})
+	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE},
+			fetch = FetchType.EAGER)
 	@JoinColumn(name = "music_type",
 			nullable = false)
 	private MusicType music_type;
