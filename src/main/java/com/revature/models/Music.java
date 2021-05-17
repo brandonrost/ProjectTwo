@@ -32,7 +32,7 @@ public class Music {
 	
 	@Column(name = "music_pic",
 			nullable = true)
-	private byte[] music_pic;
+	private String music_pic;
 	
 	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE},
 			fetch = FetchType.EAGER)

@@ -19,11 +19,12 @@ public class AuthorizationAspect {
 	
 	@Autowired
 	private HttpServletRequest request;
+	@SuppressWarnings("unused")
 	@Autowired
 	private HttpServletResponse response;
 	
 	@Around("@annotation(com.revature.annotations.LoggedInOnly)")
-	public ResponseEntity protectEndpointForLoggedInUsersOnly(ProceedingJoinPoint pjp) throws Throwable {
+	public ResponseEntity<Object> protectEndpointForLoggedInUsersOnly(ProceedingJoinPoint pjp) throws Throwable {
 		
 		HttpSession session = request.getSession(false);
 		
@@ -32,6 +33,7 @@ public class AuthorizationAspect {
 					.body(new MessageTemplate("You must be logged in to access this resource"));
 		}
 		// In order to execute the method annotated with UserOnly, we need to do
+		@SuppressWarnings("unchecked")
 		ResponseEntity<Object> result = (ResponseEntity<Object>) pjp.proceed(pjp.getArgs());
 		
 		return result;

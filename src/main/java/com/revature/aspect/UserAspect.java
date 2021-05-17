@@ -7,7 +7,6 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -40,7 +39,7 @@ public class UserAspect {
 			logger.info(o.toString());
 		}
 		if (result instanceof ResponseEntity) {
-			Object obj = ((ResponseEntity) result).getBody(); 
+			Object obj = ((ResponseEntity<?>) result).getBody(); 
 			logger.info("Executing @AfterReturning on method: " + jp.getSignature().toLongString());
 			if (obj instanceof MessageTemplate) {
 				logger.info("MessageTemplate warning: " + ((MessageTemplate) obj).getMessage());
