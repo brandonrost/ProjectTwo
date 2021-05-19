@@ -99,7 +99,7 @@ public class MusicController {
 	
 	@GetMapping(path = "/track/getRecommended")
 	public ResponseEntity<Object> getRecommended() throws IOException {
-		User user = new User(); 		
+		User user;		
 		try {
 			HttpSession session = request.getSession(true);
 			user = (User) session.getAttribute("loggedInUser");
