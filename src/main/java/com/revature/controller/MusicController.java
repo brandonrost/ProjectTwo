@@ -5,11 +5,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -22,11 +24,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import com.revature.exceptions.DuplicateEntryException;
+import com.revature.exceptions.MusicNotAddedException;
 import com.revature.models.Music;
+import com.revature.models.MusicList;
 import com.revature.models.MusicType;
+import com.revature.models.User;
 import com.revature.service.MusicService;
+import com.revature.template.MessageTemplate;
+import com.revature.template.MusicTemplate;
 import com.revature.util.SpotifyBearerToken;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class MusicController {
@@ -80,6 +92,27 @@ public class MusicController {
 			
 		} catch (IOException | ParseException e) {
 			return ResponseEntity.status(400).body("An error occured while searching SpotifyAPI for track. Exception: " + e.getMessage());
+		}
+	}
+	
+	@PostMapping(path = "addTrack")
+	public ResponseEntity<Object> addTrack(@RequestBody @Valid MusicTemplate musicTemplate) throws IOException, MusicNotAddedException, DuplicateEntryException, SQLException {
+		try {
+			HttpSession session = request.getSession(true);
+			User user = (User) session.getAttribute("loggedInUser");
+			MusicList musicList = user.getMusic_list(); 
+			
+			Object serviceObject = musicService.addTrack(musicTemplate, musicList);
+			
+			if(serviceObject instanceof Music) {
+				return ResponseEntity.status(200).body(serviceObject);
+			}else {
+				return ResponseEntity.status(400).body(serviceObject); 
+			}			
+		} catch (NullPointerException e) {
+			return ResponseEntity.status(404).body(new MessageTemplate("User must be logged in to utilize this feature of TasteBass!")); 
+		} catch (DuplicateEntryException e1) {
+			return ResponseEntity.status(404).body(new MessageTemplate("Could not add Music to database because track with this spotify_id already exists.")); 
 		}
 	}
 }

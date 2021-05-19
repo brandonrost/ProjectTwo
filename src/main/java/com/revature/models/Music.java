@@ -27,7 +27,8 @@ public class Music {
 	private String music_name; 
 	
 	@Column(name = "spotify_id",
-			nullable = false)
+			nullable = false,
+			unique = true)
 	private String spotify_id; 
 	
 	@Column(name = "music_pic",

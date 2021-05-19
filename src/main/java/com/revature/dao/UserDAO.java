@@ -40,7 +40,7 @@ public class UserDAO {
 				registerTemplate.getUsername(),
 				registerTemplate.getPassword(),
 				registerTemplate.getEmail(), new MusicList());
-		session.persist(user);
+		session.persist(user);		
 
 		return user;
 	}

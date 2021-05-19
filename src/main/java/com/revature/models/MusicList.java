@@ -35,4 +35,9 @@ public class MusicList {
 	private List<Music> music_list = new ArrayList<Music>(); 
 	
 	
+	public void addToList(Music music) {
+		this.music_list.add(music); 
+	}
+	
+	
 }
