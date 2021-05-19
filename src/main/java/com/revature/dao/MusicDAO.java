@@ -49,19 +49,19 @@ public class MusicDAO {
 		try {
 			Music musicExists; 
 			try {
-				musicExists = (Music) findTrack(musicTemplate.getSpotify_id());				
+				musicExists = (Music) findTrack(musicTemplate.getSpotify_id());		
 			} catch (Exception e) {
 				musicExists = null; 
-			}
+			}			
 			
 			boolean musicExistsInUser = false; 
 			
-			for(Music m:ml.getMusic_list()) {
-				if(m.getMusic_id() == music.getMusic_id() || m.getMusic_id() == musicExists.getMusic_id()) {
-					musicExistsInUser = true; 
+			if(musicExists != null) {
+				for(Music m:ml.getMusic_list()) {
+					if(m.getMusic_id()== musicExists.getMusic_id()) {
+						musicExistsInUser = true; 
+					}
 				}
-			}
-			if(musicExists != null) {	
 				if(musicExistsInUser) {
 					throw new DuplicateEntryException("Track already exists within the User's Music_List"); 				
 				}else {

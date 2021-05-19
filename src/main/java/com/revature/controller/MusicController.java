@@ -171,11 +171,18 @@ public class MusicController {
 	}
 	
 	@PostMapping(path = "addTrack")
-	public ResponseEntity<Object> addTrack(@RequestBody @Valid MusicTemplate musicTemplate) throws IOException, MusicNotAddedException, DuplicateEntryException, SQLException {
+	public ResponseEntity<Object> addTrack(@RequestBody @Valid MusicTemplate musicTemplate) throws IOException, MusicNotAddedException, DuplicateEntryException, SQLException, UserNotLoggedInException {
 		try {
 			HttpSession session = request.getSession(true);
 			User user = (User) session.getAttribute("loggedInUser");
-			MusicList musicList = user.getMusic_list(); 
+			MusicList musicList; 
+			if(user.getFirstName() == null) {
+				musicList = new MusicList(); 
+				throw new UserNotLoggedInException(); 
+			} else {
+				musicList = user.getMusic_list();				
+			}
+			System.out.println(user.toString() + musicList.toString());
 			
 			Object serviceObject = musicService.addTrack(musicTemplate, musicList);
 			
@@ -184,7 +191,7 @@ public class MusicController {
 			}else {
 				return ResponseEntity.status(400).body(serviceObject); 
 			}			
-		} catch (NullPointerException e) {
+		} catch (UserNotLoggedInException e) {
 			return ResponseEntity.status(404).body(new MessageTemplate("User must be logged in to utilize this feature of TasteBass!")); 
 		} catch (DuplicateEntryException e1) {
 			return ResponseEntity.status(404).body(new MessageTemplate("Could not add Music to database because track with this spotify_id already exists.")); 
