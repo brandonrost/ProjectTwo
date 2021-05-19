@@ -8,6 +8,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.revature.exceptions.DuplicateEntryException;
 import com.revature.exceptions.MusicNotAddedException;
+import com.revature.exceptions.UserNotLoggedInException;
 import com.revature.models.Music;
 import com.revature.models.MusicList;
 import com.revature.models.MusicType;
@@ -93,6 +95,79 @@ public class MusicController {
 		} catch (IOException | ParseException e) {
 			return ResponseEntity.status(400).body("An error occured while searching SpotifyAPI for track. Exception: " + e.getMessage());
 		}
+	}
+	
+	@GetMapping(path = "/track/getRecommended")
+	public ResponseEntity<Object> getRecommended() throws IOException {
+		User user = new User(); 		
+		try {
+			HttpSession session = request.getSession(true);
+			user = (User) session.getAttribute("loggedInUser");
+			if(user.getMusic_list().getMusic_list() != null) {
+				StringBuilder sb = new StringBuilder();
+				sb.append("?market=US"); 
+				
+				List<Music> usersMusicList = user.getMusic_list().getMusic_list(); 
+				List<Music> randomTracks = new ArrayList<Music>(); 
+				
+				Random rand = new Random();
+				
+			    int numberOfElements = 5;
+
+			    for (int i = 0; i < numberOfElements; i++) {
+			        int randomIndex = rand.nextInt(usersMusicList.size());
+			        Music randomElement = usersMusicList.get(randomIndex);
+			        usersMusicList.remove(randomIndex);
+			        randomTracks.add(randomElement);
+			    }
+			    
+				for(Music m:randomTracks) {
+					sb.append("&seed_tracks=" + m.getSpotify_id());					
+				}
+				sb.append("&min_energy=0.4&min_popularity=50"); 
+				
+				URL url = new URL("https://api.spotify.com/v1/recommendations" + sb);
+				HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+				connection.setRequestMethod("GET");
+				connection.setRequestProperty("Accept", "application/json");
+				connection.addRequestProperty("Content-Type", "application/json");
+				SpotifyBearerToken sbt = new SpotifyBearerToken(); 
+				connection.addRequestProperty("Authorization",
+						"Bearer " + sbt.getSpotifyBearerToken());
+				
+				InputStream responseStream = connection.getInputStream();
+				
+				List<Music> musicList = new ArrayList<Music>(); 
+				JSONParser jsonParser = new JSONParser();
+				try {
+					JSONObject jsonObject = (JSONObject)jsonParser.parse(
+					      new InputStreamReader(responseStream, "UTF-8"));
+					JSONArray tracks = (JSONArray) jsonObject.get("tracks");
+					for(int i=0; i<tracks.size(); i++) {
+						JSONObject jsonTrack = (JSONObject) tracks.get(i); 
+						Music track = new Music(); 
+						track.setMusic_name(jsonTrack.get("name").toString());
+						track.setSpotify_id(jsonTrack.get("id").toString()); 
+						track.setMusic_type(new MusicType(1, "track"));
+						JSONObject jsonAlbum = (JSONObject) jsonTrack.get("album");
+						JSONArray jsonImages = (JSONArray) jsonAlbum.get("images"); 
+						JSONObject jsonPic = (JSONObject) jsonImages.get(0); 
+						track.setMusic_pic(jsonPic.get("url").toString()); 
+						musicList.add(track); 
+					}
+					return ResponseEntity.status(200).body(musicList);
+					
+				} catch (IOException | ParseException e) {
+					return ResponseEntity.status(400).body("An error occured while searching SpotifyAPI for track recommendations. Exception: " + e.getMessage());
+				}
+				
+			}else {
+				throw new UserNotLoggedInException("Must be registered and logged in to an Account to access this functionality!"); 
+			}			
+		} catch (UserNotLoggedInException e) {
+			ResponseEntity.status(401).body(new MessageTemplate("Must be registered and logged in to an Account to access this functionality!"));			
+		}
+		return null;
 	}
 	
 	@PostMapping(path = "addTrack")

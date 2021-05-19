@@ -24,6 +24,16 @@ public class MusicDAO {
 	private SessionFactory sessionFactory;
 	
 	@Transactional
+	public Object findTrack(String spotify_id) {
+		Session session = sessionFactory.getCurrentSession(); 
+		
+		Music music = (Music) session.createQuery("FROM Music m WHERE m.spotify_id = :spotifyid")
+				.setParameter("spotifyid", spotify_id).getSingleResult(); 
+		
+		return music;
+	}
+	
+	@Transactional
 	public Object addTrack(@Valid MusicTemplate musicTemplate, MusicList musicList) throws SQLException, DuplicateEntryException {
 		Session session = sessionFactory.getCurrentSession();
 		
@@ -36,18 +46,21 @@ public class MusicDAO {
 		music.setSpotify_id(musicTemplate.getSpotify_id());
 		
 		MusicList ml = session.get(MusicList.class, musicList.getMusic_list_id()); 
-		
-		Music musicExists = (Music) session.createQuery("FROM Music m WHERE m.spotify_id = :spotifyid")
-				.setParameter("spotifyid", music.getSpotify_id()).getSingleResult(); 
-		
-		boolean musicExistsInUser = false; 
-		
-		for(Music m:ml.getMusic_list()) {
-			if(m.getMusic_id() == music.getMusic_id() || m.getMusic_id() == musicExists.getMusic_id()) {
-				musicExistsInUser = true; 
-			}
-		}
 		try {
+			Music musicExists; 
+			try {
+				musicExists = (Music) findTrack(musicTemplate.getSpotify_id());				
+			} catch (Exception e) {
+				musicExists = null; 
+			}
+			
+			boolean musicExistsInUser = false; 
+			
+			for(Music m:ml.getMusic_list()) {
+				if(m.getMusic_id() == music.getMusic_id() || m.getMusic_id() == musicExists.getMusic_id()) {
+					musicExistsInUser = true; 
+				}
+			}
 			if(musicExists != null) {	
 				if(musicExistsInUser) {
 					throw new DuplicateEntryException("Track already exists within the User's Music_List"); 				
