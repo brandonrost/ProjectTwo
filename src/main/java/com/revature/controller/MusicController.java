@@ -107,7 +107,7 @@ public class MusicController {
 				StringBuilder sb = new StringBuilder();
 				sb.append("?market=US"); 
 				
-				List<Music> usersMusicList = user.getMusic_list().getMusic_list(); 
+				List<Music> usersMusicList = new ArrayList<Music>(user.getMusic_list().getMusic_list());  
 				List<Music> randomTracks = new ArrayList<Music>(); 
 				
 				Random rand = new Random();
