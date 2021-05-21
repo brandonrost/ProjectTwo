@@ -39,6 +39,11 @@ public class UserController {
 	@Autowired
 	private HttpServletResponse response;
 
+//	// Pass in our mocked userService - for testing purposes only
+//	public UserController(UserService userService) {
+//		this.userService = userService;
+//	}
+	
 	@PostMapping(path = "login")
 	public ResponseEntity<Object> login(@RequestBody @Valid LoginTemplate loginTemplate) {
 		try {

@@ -54,7 +54,7 @@ public class MusicDAO {
 				musicExists = null; 
 			}			
 			
-			boolean musicExistsInUser = false; 
+			boolean musicExistsInUser = false;
 			
 			if(musicExists != null) {
 				for(Music m:ml.getMusic_list()) {
