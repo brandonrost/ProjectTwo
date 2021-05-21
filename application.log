@@ -2845,3 +2845,359 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 10:47:26.560 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe1, password=password)
 10:47:26.561 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
 10:47:26.561 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Now logged in as jdoe1
+12:21:36.301 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+12:21:37.068 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:21:37.068 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:21:37.071 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+12:21:37.158 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:21:37.285 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:21:37.286 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:21:37.286 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+12:21:37.287 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:21:37.307 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:21:37.307 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:21:37.308 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+12:21:37.361 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:22:05.355 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+12:22:06.013 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:22:06.014 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:22:06.016 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+12:22:06.096 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:22:06.172 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:22:06.173 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:22:06.173 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+12:22:06.176 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:22:06.197 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:22:06.197 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:22:06.197 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+12:22:06.234 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:27:35.483 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+12:27:36.176 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:27:36.177 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:27:36.179 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+12:27:36.252 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+12:27:36.293 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:27:36.293 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:27:36.293 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+12:27:36.295 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+12:27:36.318 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:27:36.318 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+12:27:36.318 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+12:27:36.347 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:10:03.921 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:10:04.616 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:10:04.617 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:10:04.621 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+14:10:04.709 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:10:04.758 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:10:04.758 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:10:04.758 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:10:04.760 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:10:04.783 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:10:04.783 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:10:04.783 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:10:04.813 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:12:10.243 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:12:10.932 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:12:10.933 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:12:10.936 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+14:12:11.021 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:12:11.061 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:12:11.061 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:12:11.062 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:12:11.064 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:12:11.085 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:12:11.085 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:12:11.086 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:12:11.087 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:12:11.109 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:12:11.109 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:12:11.110 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:12:11.144 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:13:08.163 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:13:08.938 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:13:08.939 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:13:08.943 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+14:13:09.049 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:13:09.110 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:13:09.110 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:13:09.111 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:13:09.112 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:13:09.151 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:13:09.152 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:13:09.152 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:13:09.153 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:13:09.178 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:13:09.178 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:13:09.178 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:13:09.205 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:15:09.835 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:15:10.572 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:15:10.572 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:15:10.575 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+14:15:10.645 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:15:10.690 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:15:10.690 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:15:10.690 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:15:10.693 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:15:10.716 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:15:10.716 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:15:10.716 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:15:10.717 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:15:10.739 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:15:10.739 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:15:10.739 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:15:10.768 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:17:34.007 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:17:34.661 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:17:34.661 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:17:34.664 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+14:17:34.741 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:17:34.775 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:17:34.775 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:17:34.775 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:17:34.793 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:17:34.793 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:17:34.810 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:17:34.810 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:17:34.810 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:17:34.812 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:17:34.830 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:17:34.830 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:17:34.830 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:17:34.832 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:17:34.858 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:17:34.858 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:17:34.858 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:17:34.892 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:19:32.132 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:19:32.844 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:32.845 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:32.849 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+14:19:32.949 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:19:33.007 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.025 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.026 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:19:33.042 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:19:33.088 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.089 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.090 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+14:19:33.091 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:19:33.109 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.109 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.110 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+14:19:33.110 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:19:33.134 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.134 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.134 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:19:33.135 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:19:33.150 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.150 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.150 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:19:33.151 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:19:33.151 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:19:33.170 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:19:33.170 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:19:33.170 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:19:33.197 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:22:57.774 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:22:58.482 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.482 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.486 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+14:22:58.568 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:22:58.621 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.621 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.621 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.636 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.654 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.655 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.655 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.656 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.656 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.680 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.681 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.681 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.681 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.698 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.699 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.700 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.700 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.715 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.715 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.715 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.716 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:22:58.730 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.730 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.730 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.731 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:22:58.748 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.748 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.748 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.749 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.768 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.769 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.769 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.770 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.770 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:22:58.796 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:22:58.797 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:22:58.797 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:22:58.826 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:26:58.865 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:26:59.602 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.603 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.607 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+14:26:59.699 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:26:59.746 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.748 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.748 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.763 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.781 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.781 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.781 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.814 [main] WARN  com.revature.service.UserService - firstName:must not be blank
+14:26:59.846 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.847 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.847 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.848 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.848 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.867 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.867 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.867 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.868 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.882 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.882 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.882 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.883 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.898 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.898 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.898 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.899 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:26:59.914 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.914 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.915 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.916 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:26:59.933 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.933 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.933 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.934 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.961 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.961 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.961 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.962 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.962 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:26:59.981 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:26:59.986 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:26:59.986 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:26:59.988 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:28:30.405 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:28:31.265 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.265 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.269 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+14:28:31.367 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:28:31.433 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.434 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.434 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.453 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.478 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.478 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.479 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.521 [main] WARN  com.revature.service.UserService - firstName:must not be blank
+14:28:31.541 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.542 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.542 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.542 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.542 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.565 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.567 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.567 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.567 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.586 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.586 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.586 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.587 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.603 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.604 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.604 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.606 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:28:31.627 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.627 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.627 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.628 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:28:31.646 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.646 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.646 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.647 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.667 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.668 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.668 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:28:31.668 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.668 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:28:31.689 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:28:31.689 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:28:31.690 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+14:28:31.690 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:30:26.466 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+14:30:27.184 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.184 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.188 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+14:30:27.277 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:30:27.327 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.328 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.328 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.355 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.380 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.380 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.381 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.413 [main] WARN  com.revature.service.UserService - username:must not be blank
+14:30:27.433 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.433 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.433 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.434 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.434 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.455 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.456 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.457 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+14:30:27.457 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.474 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.474 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.475 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.478 [main] WARN  com.revature.service.UserService - password:must not be blank
+14:30:27.478 [main] WARN  com.revature.service.UserService - password:size must be between 6 and 2147483647
+14:30:27.495 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.496 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.496 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.497 [main] WARN  com.revature.service.UserService - firstName:must not be blank
+14:30:27.520 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.520 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.520 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.521 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:30:27.537 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.537 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.538 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.538 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.557 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.557 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.557 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.559 [main] WARN  com.revature.service.UserService - lastName:must not be blank
+14:30:27.577 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.578 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.578 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.579 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+14:30:27.594 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.594 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.594 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.595 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+14:30:27.610 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.610 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.610 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.610 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.627 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.627 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.627 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.628 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.629 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+14:30:27.644 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+14:30:27.644 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+14:30:27.644 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+14:30:27.645 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.

@@ -1,12 +1,13 @@
 package com.revature.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.lenient;
-import static org.mockito.Mockito.when;
 
 import java.sql.SQLException;
 
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -44,12 +45,16 @@ class UserServiceUnitTest {
 				
 		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq("password"))).thenReturn(user1);
 		
+		lenient().when(userDAO.getUserByUsernameAndPassword(eq("notuser"), eq("password"))).thenThrow(new NoResultException());
+		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq("password123"))).thenThrow(new NoResultException());
+		
 		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "password", "user1@place.com");
 		lenient().when(userDAO.registerUser(registerTemplate)).thenReturn(user1);
 		
 		this.mockMvc = MockMvcBuilders.standaloneSetup(us).build();
 	}
 	
+	// Login Tests
 	@Test
 	void testLogin_goodUserInfo() throws UserNotFoundException {
 		MusicList musicList = new MusicList();
@@ -62,6 +67,81 @@ class UserServiceUnitTest {
 	}
 	
 	@Test
+	void testLogin_userDoesNotExistInDb() throws UserNotFoundException {		
+		try {
+			us.login("notuser", "password");
+			fail("UserNotFoundException did not occur. username should be invalid");
+		} catch (UserNotFoundException e) {
+			assertEquals(e.getMessage(), "User not found with the provided username and password!");
+		}
+	}
+	
+	@Test
+	void testLogin_userExistusedIncorrectPassword() throws UserNotFoundException {		
+		try {
+			us.login("user1", "password123");
+			fail("UserNotFoundException did not occur. username should be invalid");
+		} catch (UserNotFoundException e) {
+			assertEquals(e.getMessage(), "User not found with the provided username and password!");
+		}
+	}
+	
+	@Test
+	void testLogin_invalidEmptyUsername_invalidEmptyPassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("", "");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testLogin_invalidEmptyUsername_validPassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("", "password");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testLogin_validInDbUsername_invalidEmptyPassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("user1", "");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testLogin_invalidWhiteSpaceUsername_invalidWhiteSpacePassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("  ", "    ");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testLogin_invalidWhiteSpaceUsername_validPassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("    ", "password");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testLogin_validInDbUsername_invalidWhiteSpacePassword() throws UserNotFoundException {
+		User expectedUser = null;
+		
+		User actualUser = us.login("user1", "    ");
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	// RegisterUser Tests
+	@Test
 	void testRegisterUser_goodRegister() throws PersistenceException, BadParameterException, SQLException {
 		MusicList musicList = new MusicList();
 		musicList.setMusic_list_id(1);
@@ -72,5 +152,54 @@ class UserServiceUnitTest {
 		
 		assertEquals(expectedUser, actualUser);
 	}
+	
+	@Test
+	void testRegisterUser_emptyFirstName_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {
+		User expectedUser = null;
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("", "Prime", "user1", "password", "user1@place.com");
+		User actualUser = (User) us.registerUser(registerTemplate);
+		
+		assertEquals(expectedUser, actualUser);
+	}
 
+	@Test
+	void testRegisterUser_emptyLastName_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {
+		User expectedUser = null;
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "", "user1", "password", "user1@place.com");
+		User actualUser = (User) us.registerUser(registerTemplate);
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testRegisterUser_emptyUsername_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {
+		User expectedUser = null;
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "", "password", "user1@place.com");
+		User actualUser = (User) us.registerUser(registerTemplate);
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testRegisterUser_emptyPassword_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {
+		User expectedUser = null;
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "", "user1@place.com");
+		User actualUser = (User) us.registerUser(registerTemplate);
+		
+		assertEquals(expectedUser, actualUser);
+	}
+	
+	@Test
+	void testRegisterUser_emptyEmail_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {
+		User expectedUser = null;
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "password", "");
+		User actualUser = (User) us.registerUser(registerTemplate);
+		
+		assertEquals(expectedUser, actualUser);
+	}
 }
