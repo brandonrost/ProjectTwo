@@ -109,6 +109,27 @@ class UserTest {
 	}
 	
 	@Test
+	@Order(2)
+	void testLogout_withNoSignedInUser() throws Exception {
+		MockHttpSession session = new MockHttpSession();
+				
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/logout")
+				.contentType(MediaType.APPLICATION_JSON)
+				.session(session);
+		
+		MessageTemplate expected = new MessageTemplate("Could not log user out. No user was logged in.");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().isUnauthorized())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
 	@Order(3)
 	void testLogin_withGoodUser() throws Exception {
 		MessageTemplate expected = new MessageTemplate("Now logged in as jdoe1");

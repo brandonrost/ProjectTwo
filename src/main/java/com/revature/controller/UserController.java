@@ -38,11 +38,6 @@ public class UserController {
 	@SuppressWarnings("unused")
 	@Autowired
 	private HttpServletResponse response;
-
-//	// Pass in our mocked userService - for testing purposes only
-//	public UserController(UserService userService) {
-//		this.userService = userService;
-//	}
 	
 	@PostMapping(path = "login")
 	public ResponseEntity<Object> login(@RequestBody @Valid LoginTemplate loginTemplate) {
@@ -80,6 +75,11 @@ public class UserController {
 			Object user = session.getAttribute("loggedInUser");
 			session.setAttribute("loggedInUser", null);
 
+			if (user == null) {
+				return ResponseEntity.status(401)
+						.body((Object) new MessageTemplate("Could not log user out. No user was logged in."));
+			}
+			
 			return ResponseEntity.status(200)
 					.body((Object) new MessageTemplate("Successfully logged out user: " + user));
 
