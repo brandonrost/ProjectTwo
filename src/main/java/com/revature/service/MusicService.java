@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.dao.MusicDAO;
+import com.revature.exceptions.BadParameterException;
 import com.revature.exceptions.DuplicateEntryException;
 import com.revature.exceptions.MusicNotAddedException;
 import com.revature.models.Music;
@@ -38,7 +39,7 @@ public class MusicService {
 			.messageInterpolator(new ParameterMessageInterpolator()).buildValidatorFactory().getValidator();
 	
 	@Transactional(rollbackOn = {MusicNotAddedException.class, DuplicateEntryException.class, SQLException.class, ConstraintViolationException.class})
-	public Object addTrack(@Valid MusicTemplate musicTemplate, MusicList musicList) throws MusicNotAddedException, DuplicateEntryException {
+	public Object addTrack(@Valid MusicTemplate musicTemplate, MusicList musicList) throws MusicNotAddedException, DuplicateEntryException, BadParameterException {
 		try {
 			Set<ConstraintViolation<MusicTemplate>> violations = VALIDATOR.validate(musicTemplate);
 			if(violations.isEmpty()) {
@@ -50,13 +51,13 @@ public class MusicService {
 				}
 			} else {
 				for(ConstraintViolation<MusicTemplate> v:violations) {
-					logger.warn(v.getMessage() + " : " + v.getMessage());
+					logger.warn(v.toString() + " : " + v.getMessage());
 				}
 				MessageTemplate mt = new MessageTemplate("Could not add track because the following validation rules were broken:\n");
 				violations.forEach(violation -> {
 					mt.setMessage(mt + violation.getMessage() + "\n");
 				}); 
-				throw new DuplicateEntryException("Could not add Music because this track because User already has this track on their Music_List");  
+				throw new BadParameterException("Could not add Music because this track because User already has this track on their Music_List");  
 			}
 		} catch (NoResultException e) {
 			throw new MusicNotAddedException("Could not add Music to User's MusicList. Exception: " + e.getMessage()); 

@@ -39,7 +39,8 @@ public class MusicDAO {
 		
 		
 		Music music = new Music(); 
-		music.setMusic_name(musicTemplate.getName());
+		music.setMusic_name(musicTemplate.getMusic_name());
+		music.setMusic_artist(musicTemplate.getMusic_artist());
 		music.setMusic_pic(musicTemplate.getMusic_pic());
 		MusicType mt = session.get(MusicType.class, 1);
 		music.setMusic_type(mt);

@@ -22,9 +22,13 @@ public class Music {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int music_id; 
 	
-	@Column(name = "name",
+	@Column(name = "track_name",
 			nullable = false)
 	private String music_name; 
+	
+	@Column(name = "artist",
+			nullable = false)
+	private String music_artist; 
 	
 	@Column(name = "spotify_id",
 			nullable = false,

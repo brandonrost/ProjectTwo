@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.revature.exceptions.BadParameterException;
 import com.revature.exceptions.DuplicateEntryException;
 import com.revature.exceptions.MusicNotAddedException;
 import com.revature.exceptions.UserNotLoggedInException;
@@ -86,7 +87,10 @@ public class MusicController {
 				track.setMusic_type(new MusicType(1, "track"));
 				JSONObject jsonAlbum = (JSONObject) jsonTrack.get("album");
 				JSONArray jsonImages = (JSONArray) jsonAlbum.get("images"); 
-				JSONObject jsonPic = (JSONObject) jsonImages.get(0); 
+				JSONArray jsonArtists = (JSONArray) jsonAlbum.get("artists");
+				JSONObject jsonArtist = (JSONObject) jsonArtists.get(0); 
+				JSONObject jsonPic = (JSONObject) jsonImages.get(0);
+				track.setMusic_artist(jsonArtist.get("name").toString()); 
 				track.setMusic_pic(jsonPic.get("url").toString()); 
 				musicList.add(track); 
 			}
@@ -150,9 +154,12 @@ public class MusicController {
 						track.setSpotify_id(jsonTrack.get("id").toString()); 
 						track.setMusic_type(new MusicType(1, "track"));
 						JSONObject jsonAlbum = (JSONObject) jsonTrack.get("album");
-						JSONArray jsonImages = (JSONArray) jsonAlbum.get("images"); 
+						JSONArray jsonImages = (JSONArray) jsonAlbum.get("images");
+						JSONArray jsonArtists = (JSONArray) jsonAlbum.get("artists");
+						JSONObject jsonArtist = (JSONObject) jsonArtists.get(0); 
 						JSONObject jsonPic = (JSONObject) jsonImages.get(0); 
 						track.setMusic_pic(jsonPic.get("url").toString()); 
+						track.setMusic_artist(jsonArtist.get("name").toString());
 						musicList.add(track); 
 					}
 					return ResponseEntity.status(200).body(musicList);
@@ -173,6 +180,7 @@ public class MusicController {
 	@PostMapping(path = "addTrack")
 	public ResponseEntity<Object> addTrack(@RequestBody @Valid MusicTemplate musicTemplate) throws IOException, MusicNotAddedException, DuplicateEntryException, SQLException, UserNotLoggedInException {
 		try {
+			System.out.println("MUSIC TEMPLATE:" + musicTemplate.toString());
 			HttpSession session = request.getSession(true);
 			User user = (User) session.getAttribute("loggedInUser");
 			MusicList musicList; 
@@ -195,6 +203,8 @@ public class MusicController {
 			return ResponseEntity.status(404).body(new MessageTemplate("User must be logged in to utilize this feature of TasteBass!")); 
 		} catch (DuplicateEntryException e1) {
 			return ResponseEntity.status(404).body(new MessageTemplate("Could not add Music to database because track with this spotify_id already exists.")); 
+		} catch (BadParameterException e2) {
+			return ResponseEntity.status(404).body(new MessageTemplate("Make sure all required fields are entered correctly before trying to add a track."));			
 		}
 	}
 }
