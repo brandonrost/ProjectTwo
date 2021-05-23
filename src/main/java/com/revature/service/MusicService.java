@@ -16,8 +16,10 @@ import com.revature.dao.MusicDAO;
 import com.revature.exceptions.BadParameterException;
 import com.revature.exceptions.DuplicateEntryException;
 import com.revature.exceptions.MusicNotAddedException;
+import com.revature.exceptions.UserNotLoggedInException;
 import com.revature.models.Music;
 import com.revature.models.MusicList;
+import com.revature.models.User;
 import com.revature.template.MessageTemplate;
 import com.revature.template.MusicTemplate;
 
@@ -63,6 +65,16 @@ public class MusicService {
 			throw new MusicNotAddedException("Could not add Music to User's MusicList. Exception: " + e.getMessage()); 
 		} catch (SQLException e1) {
 			throw new DuplicateEntryException("Could not add Music because track already exists in the database!");
+		}
+	}
+	
+	@Transactional(rollbackOn = {BadParameterException.class})
+	public Object getTracks(User user) throws BadParameterException {
+		try {
+			Object music = musicDAO.getTracks(user);
+			return music; 
+		} catch (NoResultException e) {
+			throw new BadParameterException("Could not find any tracks in the current User's music_list."); 
 		}
 	}
 

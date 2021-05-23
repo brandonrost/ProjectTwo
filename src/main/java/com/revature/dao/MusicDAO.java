@@ -1,6 +1,8 @@
 package com.revature.dao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,6 +14,7 @@ import com.revature.exceptions.DuplicateEntryException;
 import com.revature.models.Music;
 import com.revature.models.MusicList;
 import com.revature.models.MusicType;
+import com.revature.models.User;
 import com.revature.template.MessageTemplate;
 import com.revature.template.MusicTemplate;
 
@@ -35,8 +38,7 @@ public class MusicDAO {
 	
 	@Transactional
 	public Object addTrack(@Valid MusicTemplate musicTemplate, MusicList musicList) throws SQLException, DuplicateEntryException {
-		Session session = sessionFactory.getCurrentSession();
-		
+		Session session = sessionFactory.getCurrentSession();		
 		
 		Music music = new Music(); 
 		music.setMusic_name(musicTemplate.getMusic_name());
@@ -77,5 +79,17 @@ public class MusicDAO {
 		}catch(DuplicateEntryException e) {
 			return new MessageTemplate(e.getMessage()); 			
 		}
+	}
+
+	public Object getTracks(User user) {
+		Session session = sessionFactory.getCurrentSession();
+		
+		List<Music> usersMusic = new ArrayList<Music>(); 
+		List<Integer> usersMusicIDs = (List<Integer>) session.createSQLQuery("SELECT music_id FROM Music_List_Music WHERE music_list_id = :usermusicid")
+				.setParameter("usermusicid", user.getMusic_list().getMusic_list_id()).getResultList();
+		for(int num:usersMusicIDs) {
+			usersMusic.add(session.get(Music.class, num)); 
+		}
+		return usersMusic;
 	}
 }

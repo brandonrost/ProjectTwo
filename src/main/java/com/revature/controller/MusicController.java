@@ -187,7 +187,6 @@ public class MusicController {
 	@PostMapping(path = "addTrack")
 	public ResponseEntity<Object> addTrack(@RequestBody @Valid MusicTemplate musicTemplate) throws IOException, MusicNotAddedException, DuplicateEntryException, SQLException, UserNotLoggedInException {
 		try {
-			System.out.println("MUSIC TEMPLATE:" + musicTemplate.toString());
 			HttpSession session = request.getSession(true);
 			User user = (User) session.getAttribute("loggedInUser");
 			MusicList musicList; 
@@ -197,7 +196,6 @@ public class MusicController {
 			} else {
 				musicList = user.getMusic_list();				
 			}
-			System.out.println(user.toString() + musicList.toString());
 			
 			Object serviceObject = musicService.addTrack(musicTemplate, musicList);
 			
@@ -213,5 +211,23 @@ public class MusicController {
 		} catch (BadParameterException e2) {
 			return ResponseEntity.status(404).body(new MessageTemplate("Make sure all required fields are entered correctly before trying to add a track."));			
 		}
+	}
+	
+	@PostMapping (path = "getTracks")
+	public ResponseEntity<Object> getTracks(){
+		try {
+			HttpSession session = request.getSession(true);
+			User user = (User) session.getAttribute("loggedInUser");
+			
+			Object serviceObject = musicService.getTracks(user);
+			
+			if(serviceObject instanceof List<?>) {
+				return ResponseEntity.status(200).body(serviceObject); 
+			}else {
+				throw new BadParameterException(); 
+			}
+		}catch(BadParameterException e1) {
+			return ResponseEntity.status(404).body(new MessageTemplate("Could not obtain User's music_list because they do not currently have any tracks saved to their list."));
+		}	
 	}
 }
