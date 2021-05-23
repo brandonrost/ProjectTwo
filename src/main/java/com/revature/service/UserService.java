@@ -46,7 +46,7 @@ public class UserService {
 			Set<ConstraintViolation<LoginTemplate>> violations = VALIDATOR.validate(new LoginTemplate(username, password));
 			if(violations.isEmpty()) {
 				String securePW = PasswordUtil.generateSecurePassword(password, "EqdmPh53c9x33EygXpTpcoJvc4VXLK"); 
-				password = securePW;  
+				password = securePW;
 				User user = userDAO.getUserByUsernameAndPassword(username, password); 
 				logger.info("Successfully completed business logic inside of the " + getClass() + " class.");
 				return user; 				

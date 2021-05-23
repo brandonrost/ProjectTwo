@@ -1,5 +1,9 @@
 package com.revature.integration;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -27,6 +31,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.MusicList;
+import com.revature.models.MusicType;
 import com.revature.models.User;
 import com.revature.template.MessageTemplate;
 import com.revature.template.MusicTemplate;
@@ -43,17 +48,35 @@ import com.revature.template.RegisterTemplate;
 class MusicTest {
 
 	@Autowired
+	private static SessionFactory sessionFactory;
+	
+	@Autowired
 	WebApplicationContext webApplicationContext;
 		
 	private MockMvc mockMvc;
 	private ObjectMapper objectMapper;
 	
-	@BeforeEach
-	void setup() {
-		this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-		this.objectMapper = new ObjectMapper();
-	}
-	
+//	@BeforeAll
+//	@Transactional
+//	static void allSetup() {
+//		Session sessionF = sessionFactory.getCurrentSession();
+//		
+//		Transaction txMusicType = sessionF.beginTransaction();
+//		
+//		MusicType mtTrack = new MusicType(1, "track");
+//		MusicType mtArtist = new MusicType(2, "artist");
+//		sessionF.persist(mtTrack);
+//		sessionF.persist(mtArtist);
+//		
+//		txMusicType.commit();
+//	}
+//	
+//	@BeforeEach
+//	void setup() {
+//		this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+//		this.objectMapper = new ObjectMapper();
+//	}
+//	
 //	@Test
 //	@Order(1)
 //	@Transactional
@@ -70,7 +93,7 @@ class MusicTest {
 //		String registerTemplateJson = objectMapper.writeValueAsString(registerTemplate);
 //		
 //		// what we actually want here
-//		MusicTemplate musicTemplate = new MusicTemplate("TestSong", "123456", "picHere", "Pop");
+//		MusicTemplate musicTemplate = new MusicTemplate("TestSong", "YoungSheldon", "123456", "picHere", "track");
 //		String musicTemplateJson = objectMapper.writeValueAsString(musicTemplate);
 //		MockHttpServletRequestBuilder builderMusic = MockMvcRequestBuilders
 //				.post("/addTrack")

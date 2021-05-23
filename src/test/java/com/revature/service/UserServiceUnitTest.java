@@ -33,58 +33,63 @@ class UserServiceUnitTest {
 	
 	@Mock
 	UserDAO userDAO;
-	
+		
 	@InjectMocks
 	UserService us;
+	
+	final String password = "wVz2T+3RlmM1F78VcdpSQdf1kT51ZQjjf9ywaKGRxGU=";
 	
 	@BeforeEach
 	void setup() {
 		MusicList musicList = new MusicList();
 		musicList.setMusic_list_id(1);
-		User user1 = new User(1, "User", "Prime", "user1", "password", "user1@place.com", musicList);
+		User user1 = new User(1, "User", "Prime", "user1", password, "user1@place.com", musicList);
 				
-		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq("password"))).thenReturn(user1);
+		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq(password))).thenReturn(user1);
 		
-		lenient().when(userDAO.getUserByUsernameAndPassword(eq("notuser"), eq("password"))).thenThrow(new NoResultException());
-		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq("password123"))).thenThrow(new NoResultException());
+		lenient().when(userDAO.getUserByUsernameAndPassword(eq("notuser"), eq(password))).thenThrow(new NoResultException());
 		
-		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "password", "user1@place.com");
+		final String badPassword = "T2JxQyi7d2BSbpuDeLsMJawUwalXyOuCCTjMG/rRr4Y=";
+		lenient().when(userDAO.getUserByUsernameAndPassword(eq("user1"), eq(badPassword))).thenThrow(new NoResultException());
+		
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", password, "user1@place.com");
 		lenient().when(userDAO.registerUser(registerTemplate)).thenReturn(user1);
 		
 		this.mockMvc = MockMvcBuilders.standaloneSetup(us).build();
 	}
 	
 	// Login Tests
-//	@Test
-//	void testLogin_goodUserInfo() throws UserNotFoundException {
-//		MusicList musicList = new MusicList();
-//		musicList.setMusic_list_id(1);
-//		User expectedUser = new User(1, "User", "Prime", "user1", "password", "user1@place.com", musicList);
-//		
-//		User actualUser = us.login("user1", "password");
-//		
-//		assertEquals(expectedUser, actualUser);
-//	}
+	@Test
+	void testLogin_goodUserInfo() throws UserNotFoundException {		
+		MusicList musicList = new MusicList();
+		musicList.setMusic_list_id(1);
+		User expectedUser = new User(1, "User", "Prime", "user1", password, "user1@place.com", musicList);
+		
+		User actualUser = us.login("user1", "password");
+		
+		assertEquals(expectedUser, actualUser);
+	}
 	
-//	@Test
-//	void testLogin_userDoesNotExistInDb() throws UserNotFoundException {		
-//		try {
-//			us.login("notuser", "password");
-//			fail("UserNotFoundException did not occur. username should be invalid");
-//		} catch (UserNotFoundException e) {
-//			assertEquals(e.getMessage(), "User not found with the provided username and password!");
-//		}
-//	}
+	@Test
+	void testLogin_userDoesNotExistInDb() throws UserNotFoundException {		
+		try {
+			us.login("notuser", "password");
+			fail("UserNotFoundException did not occur. username should be invalid");
+		} catch (UserNotFoundException e) {
+			assertEquals(e.getMessage(), "User not found with the provided username and password!");
+		}
+	}
 	
-//	@Test
-//	void testLogin_userExistusedIncorrectPassword() throws UserNotFoundException {		
-//		try {
-//			us.login("user1", "password123");
-//			fail("UserNotFoundException did not occur. username should be invalid");
-//		} catch (UserNotFoundException e) {
-//			assertEquals(e.getMessage(), "User not found with the provided username and password!");
-//		}
-//	}
+	@Test
+	void testLogin_userExistUsedIncorrectPassword() throws UserNotFoundException {		
+		try {
+			us.login("user1", "password123");
+			fail("UserNotFoundException did not occur. username should be invalid");
+		} catch (UserNotFoundException e) {
+			assertEquals(e.getMessage(), "User not found with the provided username and password!");
+		}
+	}
 	
 	@Test
 	void testLogin_invalidEmptyUsername_invalidEmptyPassword() throws UserNotFoundException {
@@ -141,17 +146,17 @@ class UserServiceUnitTest {
 	}
 	
 	// RegisterUser Tests
-//	@Test
-//	void testRegisterUser_goodRegister() throws PersistenceException, BadParameterException, SQLException {
-//		MusicList musicList = new MusicList();
-//		musicList.setMusic_list_id(1);
-//		User expectedUser = new User(1, "User", "Prime", "user1", "password", "user1@place.com", musicList);
-//		
-//		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "password", "user1@place.com");
-//		User actualUser = (User) us.registerUser(registerTemplate);
-//		
-//		assertEquals(expectedUser, actualUser);
-//	}
+	@Test
+	void testRegisterUser_goodRegister() throws PersistenceException, BadParameterException, SQLException {
+		MusicList musicList = new MusicList();
+		musicList.setMusic_list_id(1);
+		User expectedUser = new User(1, "User", "Prime", "user1", password, "user1@place.com", musicList);
+		
+		RegisterTemplate registerTemplate = new RegisterTemplate("User", "Prime", "user1", "password", "user1@place.com");
+		User actualUser = (User) us.registerUser(registerTemplate);
+				
+		assertEquals(expectedUser, actualUser);
+	}
 	
 	@Test
 	void testRegisterUser_emptyFirstName_otherFieldsGood() throws PersistenceException, BadParameterException, SQLException {

@@ -51,13 +51,13 @@ public class MusicService {
 				}
 			} else {
 				for(ConstraintViolation<MusicTemplate> v:violations) {
-					logger.warn(v.toString() + " : " + v.getMessage());
+					logger.warn(v.getPropertyPath().toString() + " : " + v.getMessage());
 				}
-				MessageTemplate mt = new MessageTemplate("Could not add track because the following validation rules were broken:\n");
+				MessageTemplate mt = new MessageTemplate("Could not add track because the following validation rules were broken:");
 				violations.forEach(violation -> {
-					mt.setMessage(mt + violation.getMessage() + "\n");
-				}); 
-				throw new BadParameterException("Could not add Music because this track because User already has this track on their Music_List");  
+					mt.setMessage(mt.getMessage() + "\n" + violation.getPropertyPath() + " " + violation.getMessage());
+				});
+				throw new BadParameterException(mt.getMessage());  
 			}
 		} catch (NoResultException e) {
 			throw new MusicNotAddedException("Could not add Music to User's MusicList. Exception: " + e.getMessage()); 
