@@ -213,7 +213,7 @@ public class MusicController {
 		}
 	}
 	
-	@PostMapping (path = "getTracks")
+	@GetMapping (path = "getTracks")
 	public ResponseEntity<Object> getTracks(){
 		try {
 			HttpSession session = request.getSession(true);
