@@ -117,12 +117,19 @@ public class MusicController {
 				Random rand = new Random();
 				
 			    int numberOfElements = 5;
-
-			    for (int i = 0; i < numberOfElements; i++) {
-			        int randomIndex = rand.nextInt(usersMusicList.size());
-			        Music randomElement = usersMusicList.get(randomIndex);
-			        usersMusicList.remove(randomIndex);
-			        randomTracks.add(randomElement);
+			    
+			    
+			    if (user.getMusic_list().getMusic_list().size() <= numberOfElements) {
+			    	for(int i = 0; i < user.getMusic_list().getMusic_list().size(); i++) {
+			    		randomTracks.add(user.getMusic_list().getMusic_list().get(i)); 			    		
+			    	}
+			    }else {
+			    	for (int i = 0; i < numberOfElements; i++) {
+				        int randomIndex = rand.nextInt(usersMusicList.size());
+				        Music randomElement = usersMusicList.get(randomIndex);
+				        usersMusicList.remove(randomIndex);
+				        randomTracks.add(randomElement);
+				    }			    	
 			    }
 			    
 				for(Music m:randomTracks) {
