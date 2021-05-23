@@ -10,8 +10,8 @@ pipeline {
 		stage('package') {
 			steps {
 				sh 'mvn package'
-			]
-		]
+			}
+		}
 		stage('deploy') {
 			steps {
 				sh 'cp /home/ec2-user/.jenkins/workspace/tastebass-pipeline/target/TasteBass.war /home/ec2-user/apache-tomcat-9.0.46/webapps'
