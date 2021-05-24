@@ -1,9 +1,9 @@
 package com.revature.integration;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -11,8 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.annotation.Commit;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
@@ -21,21 +19,11 @@ import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.models.MusicList;
 import com.revature.models.MusicType;
-import com.revature.models.User;
-import com.revature.template.MessageTemplate;
-import com.revature.template.MusicTemplate;
-import com.revature.template.RegisterTemplate;
 
 @ExtendWith(SpringExtension.class)
 @ContextHierarchy({
@@ -45,10 +33,11 @@ import com.revature.template.RegisterTemplate;
 @WebAppConfiguration
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DirtiesContext(classMode = ClassMode.BEFORE_CLASS)
+//@TestInstance(Lifecycle.PER_CLASS)
 class MusicTest {
 
 	@Autowired
-	private static SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 	
 	@Autowired
 	WebApplicationContext webApplicationContext;
@@ -56,25 +45,41 @@ class MusicTest {
 	private MockMvc mockMvc;
 	private ObjectMapper objectMapper;
 	
-//	@BeforeAll
-//	@Transactional
-//	static void allSetup() {
-//		Session sessionF = sessionFactory.getCurrentSession();
-//		
-//		Transaction txMusicType = sessionF.beginTransaction();
-//		
-//		MusicType mtTrack = new MusicType(1, "track");
-//		MusicType mtArtist = new MusicType(2, "artist");
-//		sessionF.persist(mtTrack);
-//		sessionF.persist(mtArtist);
-//		
-//		txMusicType.commit();
-//	}
-//	
+	@BeforeEach
+	@Transactional
+	@Commit
+	void allSetup() {
+		Session sessionF = sessionFactory.getCurrentSession();
+		
+		MusicType mtTrack = new MusicType(0, "track");
+		MusicType mtArtist = new MusicType(0, "artist");
+		sessionF.persist(mtTrack);
+		sessionF.persist(mtArtist);
+	}
+	
+	@Test
+	@Transactional
+	@Order(1)
+	void test() {
+		
+	}
+	
 //	@BeforeEach
+//	@Transactional
 //	void setup() {
 //		this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 //		this.objectMapper = new ObjectMapper();
+//	
+//	Session sessionF = sessionFactory.getCurrentSession();
+//	
+//	Transaction txMusicType = sessionF.beginTransaction();
+//	
+//	MusicType mtTrack = new MusicType(1, "track");
+//	MusicType mtArtist = new MusicType(2, "artist");
+//	sessionF.persist(mtTrack);
+//	sessionF.persist(mtArtist);
+//	
+//	txMusicType.commit();
 //	}
 //	
 //	@Test
