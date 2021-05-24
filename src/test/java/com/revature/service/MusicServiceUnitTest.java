@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.lenient;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.NoResultException;
 
@@ -24,6 +26,7 @@ import com.revature.exceptions.MusicNotAddedException;
 import com.revature.models.Music;
 import com.revature.models.MusicList;
 import com.revature.models.MusicType;
+import com.revature.models.User;
 import com.revature.template.MessageTemplate;
 import com.revature.template.MusicTemplate;
 
@@ -62,6 +65,16 @@ class MusicServiceUnitTest {
 		MusicTemplate mtZy = new MusicTemplate("zyzyzyzyzyzy", "JDribble", "id0000", "no.pic", "track");
 		
 		lenient().when(musicDAO.addTrack(mtZy, musicList)).thenThrow(new NoResultException("zyzyzyzyzyzy not found"));
+		
+		// Return Music List
+		User user1 = new User(1, "User", "Prime", "user1", "password", "user1@place.com", musicList);
+		List<Music> listOfMusic = new ArrayList<Music>();
+		listOfMusic.add(music1);
+		lenient().when(musicDAO.getTracks(user1)).thenReturn(listOfMusic);
+		
+		// Return Bad Music List
+		User user2 = new User(1, "Resu", "Forgotten", "user2", "password", "user2@place.com", musicList);
+		lenient().when(musicDAO.getTracks(user2)).thenThrow(new NoResultException("List is supposed to be empty"));
 	}
 	
 	@Test
@@ -158,6 +171,40 @@ class MusicServiceUnitTest {
 			}
 			
 			assertTrue(allTrue, "BadParameterException, one or more parameters did not properly register as non-blank/blank.");
+		}
+	}
+	
+	@Test
+	@SuppressWarnings("unchecked")
+	void test_getTracksReturnsMusicList() throws BadParameterException {
+		MusicType mType = new MusicType(1, "track");
+		Music musicExpected = new Music(1, "Track", "TheArtist", "id445", "pic.io.place", mType);
+		List<Music> listExpected = new ArrayList<Music>();
+		listExpected.add(musicExpected);
+		
+		MusicList musicList = new MusicList();
+		musicList.setMusic_list_id(1);
+		User user = new User(1, "User", "Prime", "user1", "password", "user1@place.com", musicList);
+		
+		List<Music> actualList = (List<Music>) ms.getTracks(user);
+		
+		assertEquals(listExpected, actualList);
+	}
+	
+	@Test
+	void test_getTracksNothingInDatabase() throws BadParameterException {
+		String expectedE = "Could not find any tracks in the current User's music_list.";
+		
+		try {
+			MusicList musicList = new MusicList();
+			musicList.setMusic_list_id(1);
+			User user = new User(1, "Resu", "Forgotten", "user2", "password", "user2@place.com", musicList);
+			
+			ms.getTracks(user);
+			
+			fail("BadParameterException did not occur.");
+		} catch (BadParameterException actualE) {
+			assertEquals(expectedE, actualE.getMessage());
 		}
 	}
 }

@@ -74,12 +74,35 @@ class UserTest {
 		String expectedJsonResponse = objectMapper.writeValueAsString(new MessageTemplate("Now logged in as "
 				+ expected.getUsername()));
 		
-		MvcResult result = this.mockMvc
+		this.mockMvc
 			.perform(builder)
 			.andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
 			.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+	}
+	
+	@Test
+	@Order(1)
+	@Transactional
+	@Commit
+	void testAddUser_noUsername_noEmail() throws Exception {
+		MusicList musicList = new MusicList();
+		musicList.setMusic_list_id(1);
 		
-		System.out.println(result.getResponse().getContentAsString());
+		RegisterTemplate registerTemplate = new RegisterTemplate("John", "Doe", "", "password", "");
+		String registerTemplateJson = objectMapper.writeValueAsString(registerTemplate);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/addUser")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(registerTemplateJson);
+		
+		MessageTemplate expected = new MessageTemplate("Could not register new user. Make sure all fields are filled in correctly.");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		this.mockMvc
+			.perform(builder)
+			.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+			.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
 	}
 
 	@Test
@@ -100,12 +123,10 @@ class UserTest {
 		MessageTemplate expected = new MessageTemplate("Successfully logged out user: " + user);
 		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
 		
-		MvcResult result = this.mockMvc
+		this.mockMvc
 				.perform(builder)
 				.andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
 				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
-		
-		System.out.println(result.getResponse().getContentAsString());
 	}
 	
 	@Test
@@ -121,12 +142,10 @@ class UserTest {
 		MessageTemplate expected = new MessageTemplate("Could not log user out. No user was logged in.");
 		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
 		
-		MvcResult result = this.mockMvc
+		this.mockMvc
 				.perform(builder)
 				.andExpect(MockMvcResultMatchers.status().isUnauthorized())
 				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
-		
-		System.out.println(result.getResponse().getContentAsString());
 	}
 	
 	@Test
@@ -143,9 +162,139 @@ class UserTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(loginTemplateJson);
 		
-		MvcResult result = this.mockMvc
+		this.mockMvc
 				.perform(builder)
 				.andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withGoodUsernameBadPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Could not find user with provided username and password: jdoe1~~password123");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("jdoe1", "password123");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withGoodUsernameEmptyPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Please make sure username and password are not blank. User provided: jdoe1~~");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("jdoe1", "");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withBadUsernameGoodPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Could not find user with provided username and password: jdoe123~~password");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("jdoe123", "password");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withEmptyUsernameGoodPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Please make sure username and password are not blank. User provided: ~~password");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("", "password");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withBadUsernameBadPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Could not find user with provided username and password: jdoe123~~password123");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("jdoe123", "password123");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
+				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
+		
+		System.out.println(result.getResponse().getContentAsString());
+	}
+	
+	@Test
+	@Order(3)
+	void testLogin_withEmptyUsernameEmptyPassword() throws Exception {
+		MessageTemplate expected = new MessageTemplate("Access Denied -> Please make sure username and password are not blank. User provided: ~~");
+		String expectedJsonResponse = objectMapper.writeValueAsString(expected);
+		
+		LoginTemplate lt = new LoginTemplate("", "");
+		String loginTemplateJson = objectMapper.writeValueAsString(lt);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders
+				.post("/login")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(loginTemplateJson);
+		
+		MvcResult result = this.mockMvc
+				.perform(builder)
+				.andExpect(MockMvcResultMatchers.status().is4xxClientError())
 				.andExpect(MockMvcResultMatchers.content().json(expectedJsonResponse)).andReturn();
 		
 		System.out.println(result.getResponse().getContentAsString());
