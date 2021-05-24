@@ -1495,3 +1495,242 @@ org.springframework.transaction.UnexpectedRollbackException: Transaction rolled 
 00:31:21.830 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe123, password=password)
 00:31:21.830 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
 00:31:21.830 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Could not find user with provided username and password: jdoe123~~password
+00:57:05.168 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+00:58:17.356 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+00:59:35.628 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+00:59:36.390 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+00:59:36.391 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+00:59:36.393 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+01:00:59.281 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:01:00.028 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:01:00.028 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:01:00.031 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:04:56.402 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:04:57.152 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:04:57.152 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:04:57.154 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+01:05:25.083 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:05:25.814 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:05:25.814 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:05:25.817 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:10:11.029 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:10:11.821 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:10:11.821 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:10:11.824 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:17:57.299 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:17:58.030 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:17:58.030 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:17:58.032 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+01:19:15.045 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:19:15.784 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:19:15.784 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:19:15.787 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:23:05.012 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:23:05.764 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:23:05.765 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:23:05.768 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:23:06.411 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:23:06.412 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:23:06.412 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:24:16.038 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:24:16.768 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:24:16.768 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:24:16.770 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+01:24:17.435 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:24:17.435 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:24:17.435 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:28:48.504 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:28:49.241 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:28:49.242 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:28:49.245 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:30:19.089 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:30:19.819 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:30:19.819 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:30:19.822 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:30:19.860 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+01:31:19.275 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:31:20.011 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:31:20.011 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:31:20.014 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:32:15.101 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:32:15.113 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@324a0017, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6187d1f5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2445445a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7502291e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17aad511, org.springframework.test.context.transaction.TransactionalTestExecutionListener@487db668, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@46944ca9, org.springframework.test.context.event.EventPublishingTestExecutionListener@22bac7bc]
+01:32:16.829 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.0.Final
+01:32:17.144 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+01:32:17.297 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:32:17.683 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+01:32:18.379 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:32:18.824 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@69926b6e testClass = UserDAOUnitTest, testInstance = com.revature.dao.UserDAOUnitTest@7ea8224b, testMethod = testRegisterUser@UserDAOUnitTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5a010eec testClass = UserDAOUnitTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@623ded82 testClass = UserDAOUnitTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@5020b59f]; rollback [false]
+01:32:18.904 [main] INFO  o.s.t.c.t.TransactionContext - Committed transaction for test: [DefaultTestContext@69926b6e testClass = UserDAOUnitTest, testInstance = com.revature.dao.UserDAOUnitTest@7ea8224b, testMethod = testRegisterUser@UserDAOUnitTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5a010eec testClass = UserDAOUnitTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@623ded82 testClass = UserDAOUnitTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+01:32:18.919 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@69926b6e testClass = UserDAOUnitTest, testInstance = com.revature.dao.UserDAOUnitTest@3cd6d147, testMethod = testGetUserByIdAndPassword_success@UserDAOUnitTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5a010eec testClass = UserDAOUnitTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@623ded82 testClass = UserDAOUnitTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@5020b59f]; rollback [true]
+01:32:19.023 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@69926b6e testClass = UserDAOUnitTest, testInstance = com.revature.dao.UserDAOUnitTest@3cd6d147, testMethod = testGetUserByIdAndPassword_success@UserDAOUnitTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5a010eec testClass = UserDAOUnitTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@623ded82 testClass = UserDAOUnitTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+01:32:19.724 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:19.725 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:19.726 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:19.917 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+01:32:19.940 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:19.940 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:19.941 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:19.958 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:19.977 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:19.977 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:19.978 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.004 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+01:32:20.024 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.024 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.024 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.025 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.025 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.053 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.053 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.054 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:20.054 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.069 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.069 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.069 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.080 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+01:32:20.128 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.128 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.129 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.140 [main] WARN  com.revature.service.UserService - username:must not be blank
+01:32:20.154 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.154 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.155 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.155 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.171 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.171 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.172 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:20.172 [main] WARN  com.revature.service.UserService - firstName:must not be blank
+01:32:20.184 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.185 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.185 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.211 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+01:32:20.224 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.224 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.224 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.227 [main] WARN  com.revature.service.UserService - password:must not be blank
+01:32:20.228 [main] WARN  com.revature.service.UserService - password:size must be between 6 and 2147483647
+01:32:20.240 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.241 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.241 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.242 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.254 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.254 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.255 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:20.255 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.255 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:20.267 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.267 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.267 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.268 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+01:32:20.324 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.324 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.325 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:20.325 [main] WARN  com.revature.service.UserService - lastName:must not be blank
+01:32:20.361 [main] WARN  com.revature.service.MusicService - music_pic : must not be blank
+01:32:20.362 [main] WARN  com.revature.service.MusicService - music_type : must not be blank
+01:32:20.362 [main] WARN  com.revature.service.MusicService - music_name : must not be blank
+01:32:20.362 [main] WARN  com.revature.service.MusicService - music_artist : must not be blank
+01:32:20.362 [main] WARN  com.revature.service.MusicService - spotify_id : must not be blank
+01:32:20.434 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:20.434 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:20.434 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:21.112 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:32:21.112 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f959640, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5fdebe73, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6919a8a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23c0fcf0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60a4595e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4a234e1f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@406cc81b, org.springframework.test.context.event.EventPublishingTestExecutionListener@64ef9b9a]
+01:32:21.945 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+01:32:22.041 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:32:22.211 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@3846ba32 testClass = UserTest, testInstance = com.revature.integration.UserTest@40a32c25, testMethod = testAddUser_andReceiveGoodJsonResponse@UserTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@685280dd testClass = UserTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@56957f08 testClass = UserTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@74c919b2]; rollback [false]
+01:32:22.213 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.214 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.215 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:22.253 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.addUser(com.revature.template.RegisterTemplate)
+01:32:22.290 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+01:32:22.325 [main] INFO  com.revature.aspect.UserAspect - RegisterTemplate(firstName=John, lastName=Doe, username=jdoe1, password=wVz2T+3RlmM1F78VcdpSQdf1kT51ZQjjf9ywaKGRxGU=, email=jdoe1@company.net)
+01:32:22.325 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.addUser(com.revature.template.RegisterTemplate)
+01:32:22.325 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Now logged in as jdoe1
+01:32:22.338 [main] INFO  o.s.t.c.t.TransactionContext - Committed transaction for test: [DefaultTestContext@3846ba32 testClass = UserTest, testInstance = com.revature.integration.UserTest@40a32c25, testMethod = testAddUser_andReceiveGoodJsonResponse@UserTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@685280dd testClass = UserTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@56957f08 testClass = UserTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+01:32:22.341 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@3846ba32 testClass = UserTest, testInstance = com.revature.integration.UserTest@578081e5, testMethod = testAddUser_noUsername_noEmail@UserTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@685280dd testClass = UserTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@56957f08 testClass = UserTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@74c919b2]; rollback [false]
+01:32:22.342 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.342 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.343 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:22.345 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.addUser(com.revature.template.RegisterTemplate)
+01:32:22.346 [main] WARN  com.revature.service.UserService - username:must not be blank
+01:32:22.346 [main] WARN  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.346 [main] INFO  com.revature.aspect.UserAspect - RegisterTemplate(firstName=John, lastName=Doe, username=, password=password, email=)
+01:32:22.346 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.addUser(com.revature.template.RegisterTemplate)
+01:32:22.346 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Could not register new user. Make sure all fields are filled in correctly.
+01:32:22.348 [main] INFO  o.s.t.c.t.TransactionContext - Committed transaction for test: [DefaultTestContext@3846ba32 testClass = UserTest, testInstance = com.revature.integration.UserTest@578081e5, testMethod = testAddUser_noUsername_noEmail@UserTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@685280dd testClass = UserTest, locations = '{classpath:dispatcherContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [WebMergedContextConfiguration@56957f08 testClass = UserTest, locations = '{classpath:applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+01:32:22.350 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.351 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.351 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:22.353 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.logout()
+01:32:22.353 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.logout()
+01:32:22.354 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Successfully logged out user: User(userID=1, firstName=John, lastName=Doe, username=jdoe1, password=password, email=jdoe1@company.net, music_list=MusicList(music_list_id=1, music_list=[]))
+01:32:22.357 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.357 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.358 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:22.359 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.logout()
+01:32:22.359 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.logout()
+01:32:22.359 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Could not log user out. No user was logged in.
+01:32:22.363 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.365 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.366 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:22.370 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.370 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:22.371 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.371 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=, password=password)
+01:32:22.371 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.371 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Please make sure username and password are not blank. User provided: ~~password
+01:32:22.375 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.375 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.376 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:22.379 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.414 [main] INFO  com.revature.service.UserService - Successfully completed business logic inside of the class com.revature.service.UserService class.
+01:32:22.414 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe1, password=password)
+01:32:22.415 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.415 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Now logged in as jdoe1
+01:32:22.418 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.418 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.419 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:22.421 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.422 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:22.422 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:22.422 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.423 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=, password=)
+01:32:22.423 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.423 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Please make sure username and password are not blank. User provided: ~~
+01:32:22.426 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.426 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.426 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:22.429 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.459 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+01:32:22.460 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.461 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe1, password=password123)
+01:32:22.461 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.461 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Could not find user with provided username and password: jdoe1~~password123
+01:32:22.466 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.467 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.470 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+01:32:22.472 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.473 [main] WARN  com.revature.service.UserService - must not be blank : must not be blank
+01:32:22.473 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.473 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe1, password=)
+01:32:22.473 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.473 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Please make sure username and password are not blank. User provided: jdoe1~~
+01:32:22.477 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.477 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.478 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+01:32:22.480 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.510 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+01:32:22.511 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.511 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe123, password=password123)
+01:32:22.511 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.511 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Could not find user with provided username and password: jdoe123~~password123
+01:32:22.515 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+01:32:22.515 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+01:32:22.515 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+01:32:22.520 [main] INFO  com.revature.aspect.UserAspect - Executing @Before on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.559 [main] INFO  com.revature.service.UserService - Something went wrong when performing business logic inside of the class com.revature.service.UserService class.
+01:32:22.560 [main] INFO  c.revature.controller.UserController - Could not send request successfully. Please try again!
+01:32:22.560 [main] INFO  com.revature.aspect.UserAspect - LoginTemplate(username=jdoe123, password=password)
+01:32:22.560 [main] INFO  com.revature.aspect.UserAspect - Executing @AfterReturning on method: public org.springframework.http.ResponseEntity com.revature.controller.UserController.login(com.revature.template.LoginTemplate)
+01:32:22.561 [main] INFO  com.revature.aspect.UserAspect - MessageTemplate warning: Access Denied -> Could not find user with provided username and password: jdoe123~~password
