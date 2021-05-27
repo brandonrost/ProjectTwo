@@ -1,4 +1,4 @@
-#TasteBass
+# TasteBass
 
 ## Project Description
 
@@ -172,7 +172,7 @@ User Types:
 
 ## Contributors
 
-> Brandon Rost 
-> Joseph Peterson
-> Cody Sutton
+- Brandon Rost 
+- Joseph Peterson
+- Cody Sutton
 
