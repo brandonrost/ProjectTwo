@@ -26,7 +26,7 @@ import com.revature.template.RegisterTemplate;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(allowCredentials = "true", origins= {"http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080", "http://localhost:8080", "http://localhost:4200"})
+@CrossOrigin(allowCredentials = "true", origins= {"http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080", "http://localhost:8080", "http://localhost:4200", "http://localhost:8080/api/test/all"})
 @Controller
 public class UserController {
 
