@@ -1,20 +1,121 @@
-# TasteBass
-## TeamName: TasteBass
+#TasteBass
 
-## Description 
+## Project Description
+
 TasteBass is an application that allows users to experience music in a whole new light. Users are able to create, track, and collect a list of artists, songs, or albums that they listen to regularly and TasteBass will automatically refer the User to music that is similar to their taste. Beyond TasteBass' main utility, Users are also able to browse
-other User's 'TasteBass' playlists to expand their horizon even further. 
+other User's 'TasteBass' playlists to expand their horizon even further.
 
-## Technologies Utilized
-- Spring Framework
-- Hibernate
-- Logback
-- JUnit
-- Java
-- Mockito
-- Selenium
-- Angular
-- Spotify API
+## Technologies Used
+
+* Java - version 1.8
+* Tomcat - version 9.0.46
+* LogBack/SLF4J - version 1.2.3
+* JacksonDataBind - version 2.12.2
+* Java Servlet API - version 4.0.1
+* Spring ORM - version 5.3.6
+* Spring MVC - version 5.3.6
+* Spring Test - version 5.3.6
+* Mockito - version 3.9
+* Hibernate - version 5.4.3
+* Lombok - version 1.18.20
+* JUnit 5/Jupiter - version 4.13.2
+* MariaDB/JDBC - version 2.7.2
+* Angular 2
+* Maven
+
+* Deployed on AWS: EC2, RDS
+* Jenkins Pipeline utilized
+* Sonar Cloud utilized for code coverage
+
+## Working Environment
+* Spring Tool Suites - version 4.10 (for creating/editing Java-based backend application)
+* Visual Studio Code - version 1.55 (for creating/editing HTML, CSS, and JavaScript files)
+* Postman - version 8.5.1 (for testing HTTP requests sent to RESTful API on the backend)
+* DBWeaver - version 21.0.5 (for viewing database)
+* GitHub/GitBash - used for version-controll
+* SYSTEM: Windows 10
+
+## Features
+
+Two types of users:
+   - General Users
+   - Registered Users
+
+* General Users are able to search for tracks.
+* General Users are able to register to be a Registered User
+* Registered Users are able to log in
+* Registered Users are able to log out
+* Registered Users are able to save credentials
+* Registered Users are able to edit their profile
+* Registered Users are able to search for tracks
+* Registered Users are able to save tracks that have been searched
+* Registered Users are able to generate a list of recommended tracks based on the tracks they have saved to their profile
+* Registered Users are able to view all the tracks they have saved
+* General Users are not able to save tracks
+* General Users are not able to generate a list of recommended tracks
+
+To-do list:
+* Ability to remove tracks from the User's list of saved tracks
+* Ability to view other User's "music list"
+* Ability to filter search results based on parameters other than "track". I.e. artist, album, genere
+* Register using Facebook, Gmail, or even Spotify
+
+## Getting Started
+
+To utilize this application, the user can navigate to our website that is being hosted on an EC2 instance. Below are a list of endpoints that will allow you to navigate through our site. If you wish, you can also utilize the navigation bar on our websites home page to circumnavigate our web-application. 
+
+#### Home
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/home
+
+#### Register
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/register
+
+#### Login (Login to application)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/loginUser
+
+#### My Bucket (Users List - must be logged in)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/user
+
+#### Search (Search Track)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/admin
+
+#### Profile (Navigate to a logged-in user's profile)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/profile
+
+
+### PostMan Requests (Backend API) - BASE URL: ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/
+* POST  /addUser  :  register a new user
+```
+{
+    "firstName":"",
+    "lastName":"",
+    "username":"",
+    "password":"",
+    "email":""
+}
+```
+* POST /login  :  login to application (server-side)
+```
+{
+    "username":"",
+    "password":""
+}
+```
+* POST /logout  :  logout of the application (server-side) 
+* GET /searchTrack/track/{trackName}  :  search for a track 
+* POST /addTrack  :  add track to User list
+```
+{
+    "music_name":"Trust",
+    "music_artist": "Brent Faiyaz",
+    "spotify_id":"0oufSLnKQDoBFX5mgkDCgR",
+    "music_pic":"https://i.scdn.co/image/ab67616d0000b2731cd6e413266e97c0b6f24ed3",
+    "music_type":"track"
+}
+```
+* GET /track/getRecommended  :  get list of tracks based on (logged-in) user's music-list
+* GET /tracks  :  gets a list of the user's tracks they have saved to their music-list
+
 
 ## User Stories
 User Types:
@@ -68,3 +169,10 @@ User Types:
      1. Should be able to search based by songs with tags marking properties such as genre, mood, etc.
      2. Should be able to view other users’ list in an organized format
      3. Should be able to connect with other users through a messaging/social media system
+
+## Contributors
+
+> Brandon Rost 
+> Joseph Peterson
+> Cody Sutton
+
