@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -25,6 +26,7 @@ import com.revature.template.RegisterTemplate;
 
 import jakarta.validation.Valid;
 
+@CrossOrigin(allowCredentials = "true", origins= {"http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080", "http://localhost:8080", "http://localhost:4200"})
 @Controller
 public class UserController {
 
