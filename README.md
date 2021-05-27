@@ -38,21 +38,22 @@ other User's 'TasteBass' playlists to expand their horizon even further.
 ## Features
 
 Two types of users:
-   - General Users
-   - Registered Users
+1. Guest
+2. General Users
 
-* General Users are able to search for tracks.
-* General Users are able to register to be a Registered User
-* Registered Users are able to log in
-* Registered Users are able to log out
-* Registered Users are able to save credentials
-* Registered Users are able to edit their profile
-* Registered Users are able to search for tracks
-* Registered Users are able to save tracks that have been searched
-* Registered Users are able to generate a list of recommended tracks based on the tracks they have saved to their profile
-* Registered Users are able to view all the tracks they have saved
-* General Users are not able to save tracks
-* General Users are not able to generate a list of recommended tracks
+* Guests are able to search for tracks.
+* Guests are able to register to be a Registered User
+* Guests are not able to save tracks
+* Guests are not able to generate a list of recommended tracks
+* General Users are able to log in
+* General Users are able to log out
+* General Users are able to save credentials
+* General Users are able to edit their profile
+* General Users are able to search for tracks
+* General Users are able to save tracks that have been searched
+* General Users are able to generate a list of recommended tracks based on the tracks they have saved to their profile
+* General Users are able to view all the tracks they have saved
+
 
 To-do list:
 * Ability to remove tracks from the User's list of saved tracks
