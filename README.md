@@ -5,6 +5,9 @@
 TasteBass is an application that allows users to experience music in a whole new light. Users are able to create, track, and collect a list of artists, songs, or albums that they listen to regularly and TasteBass will automatically refer the User to music that is similar to their taste. Beyond TasteBass' main utility, Users are also able to browse
 other User's 'TasteBass' playlists to expand their horizon even further.
 
+## Project Demo
+* https://drive.google.com/file/d/1sfZvzTf2p7RkZKGQVWwl31M_UheVjUWR/view?usp=sharing
+
 ## Technologies Used
 
 * Java - version 1.8
