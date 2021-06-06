@@ -117,6 +117,8 @@ To utilize this application, the user can navigate to our website that is being 
 * GET /track/getRecommended  :  get list of tracks based on (logged-in) user's music-list
 * GET /tracks  :  gets a list of the user's tracks they have saved to their music-list
 
+## Angular Front-End Application
+* https://github.com/cdsutton/project-2-frontend
 
 ## User Stories
 User Types:
