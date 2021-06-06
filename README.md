@@ -74,14 +74,14 @@ To utilize this application, the user can navigate to our website that is being 
 #### Login (Login to application)
  * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/loginUser
 
-#### My Bucket (Users List - must be logged in)
- * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/user
+#### My Bucket (User's List - must be logged in)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/mybucket
 
 #### Search (Search Track)
- * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/admin
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/search
 
-#### Profile (Navigate to a logged-in user's profile)
- * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/profile
+#### Recommendations (Get Track Recommendations based on User's List)
+ * http://ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/recommendation
 
 
 ### PostMan Requests (Backend API) - BASE URL: ec2-3-22-185-67.us-east-2.compute.amazonaws.com:8080/TasteBass/
